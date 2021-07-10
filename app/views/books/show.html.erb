@@ -1,0 +1,26 @@
+
+<body>
+
+<header>
+  <h1>View</h1>
+</header>
+
+<div class = "momo">
+  <p>
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= @book.body %>
+  </p>
+  
+  <div class = "link">
+    <%= link_to "Edit", edit_book_path %>
+    <%= link_to "Ba", books_path %>
+  </div>
+  
+</div>
+
+<p>Find me in app/views/books/show.html.erb</p>
+</body>

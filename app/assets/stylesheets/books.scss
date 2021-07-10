@@ -1,3 +1,33 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+table {
+    line-height: 28px;
+    width: 90%;
+}
+th {
+  font-size: 25px;
+}
+a {
+  font-size: 20px;
+  margin: 0 10px;
+}
+.main2{
+  font-size: 25px;
+}
+form {
+  display:inline-grid;
+  line-height: 28px;
+}
+.new {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  place-content: center;
+}
+fotter {
+  margin: 0 auto;
+  width: 90%;
+}

@@ -17,7 +17,7 @@
           </thead>
           
           <tbody>
-              <% @book.each do |book| %>
+              <% @books.each do |book| %>
               <tr>
                   <td> <%= book.title %> </td>
                   <td> <%= book.body %> </td>
@@ -33,7 +33,7 @@
       
 　　　<div class = "new">
         <h2>New book</h2>
-        <%= form_with model:@book_new, local:true do |f| %>
+        <%= form_with model:@book, local:true do |f| %>
         <h4>Title</h4>
         <%= f.text_field :title %>
         <h4>Body</h4>
@@ -42,11 +42,20 @@
         <%= f.submit 'Create Book' %>
         <% end %>
 　　　</div>
-
-<fotter>
     <div class = "link">
-        <%= link_to "top" , top_path %>
+        <%= link_to "top" , root_path %>
     </div>
+<fotter>
+<% if @book.errors.any? %>
+  <div class="warning">
+    <ul>
+      <h3>errors</h3>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
     
 </fotter>
 

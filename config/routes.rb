@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   
   resources :books , except: [:new]
   
-  get 'top' => 'homes#top'
+  root 'homes#top'
 
 end
